@@ -1,0 +1,154 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, Arial;
+  background: #071021;
+  color: #fff;
+}
+
+.wrap {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-title {
+  font-size: 36px;
+  color: #ffd166;
+  text-shadow: 2px 2px 8px #ef476f;
+  margin-bottom: 12px;
+}
+
+.game-panel {
+  position: relative;
+  background: rgba(0,0,0,0.2);
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+}
+
+canvas {
+  display: block;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+button, select {
+  background: linear-gradient(135deg, #06d6a0, #118ab2);
+  border: none;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+button:hover, select:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+button:active, select:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.hud {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #ffd166;
+}
+
+/* Стили для информации из README */
+.game-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin-top: 30px;
+}
+
+.info-section {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.info-section h3 {
+  color: #ffd166;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.control-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.key {
+  background: #06d6a0;
+  color: #000;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.action {
+  font-weight: 500;
+}
+
+.info-section ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.info-section li {
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.info-section p {
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .game-info {
+    grid-template-columns: 1fr;
+  }
+  
+  .wrap {
+    padding: 10px;
+  }
+  
+  .hud {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

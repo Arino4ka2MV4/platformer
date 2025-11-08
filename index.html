@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canvas Platformer</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="wrap">
+    <h1 class="game-title">🕹 Canvas Platformer</h1>
+    <div class="game-panel">
+      <div class="hud">
+        <span id="score">Score: 0</span>
+        <span id="lives">Lives: 3</span>
+        <span id="level">Level: 1</span>
+        <span id="highscore">High: 0</span>
+      </div>
+      <canvas id="gameCanvas" width="900" height="500"></canvas>
+      <div class="buttons">
+        <button id="startBtn">Start</button>
+        <button id="pauseBtn">Pause</button>
+        <button id="restartBtn">Restart</button>
+        <select id="modeSelect">
+          <option value="levels">Levels</option>
+          <option value="infinite">Infinite</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Информация из README -->
+    <div class="game-info">
+      <div class="info-section">
+        <h3>🎮 Управление</h3>
+        <div class="controls">
+          <div class="control-item">
+            <span class="key">A / ←</span>
+            <span class="action">Движение влево</span>
+          </div>
+          <div class="control-item">
+            <span class="key">D / →</span>
+            <span class="action">Движение вправо</span>
+          </div>
+          <div class="control-item">
+            <span class="key">SPACE / W / ↑</span>
+            <span class="action">Прыжок</span>
+          </div>
+          <div class="control-item">
+            <span class="key">ENTER</span>
+            <span class="action">Запуск игры</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-section">
+        <h3>🎯 Цель игры</h3>
+        <ul>
+          <li>✅ Собирайте монеты (+100 очков)</li>
+          <li>✅ Прыгайте на врагов (+200 очков)</li>
+          <li>✅ Пройдите все 3 уровня</li>
+          <li>✅ Избегайте падений и врагов</li>
+        </ul>
+      </div>
+
+      <div class="info-section">
+        <h3>🏆 Советы</h3>
+        <ul>
+          <li>Используйте разбег для дальних прыжков</li>
+          <li>Корректируйте траекторию в воздухе</li>
+          <li>Собирайте все монеты для завершения уровня</li>
+          <li>У вас есть 3 жизни - будьте осторожны!</li>
+        </ul>
+      </div>
+
+      <div class="info-section">
+        <h3>ℹ️ О проекте</h3>
+        <p><strong>Создано с помощью:</strong> DeepSeek AI</p>
+        <p><strong>Время разработки:</strong> ~3 часа</p>
+        <p><strong>Технологии:</strong> HTML5 Canvas, JavaScript (ES6+), CSS3</p>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
